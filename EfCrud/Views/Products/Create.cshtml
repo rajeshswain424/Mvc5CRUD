@@ -1,0 +1,11 @@
+﻿@model EfCrud.Models.Products
+   <h2>Create</h2>
+<form method="post">
+    <dl>
+        <dt>@Html.DisplayNameFor(model=>model.Name)</dt>
+        <dd>@Html.EditorFor(model=>model.Name)</dd>
+        <dt>@Html.DisplayNameFor(model=>model.Price)</dt>
+        <dd>@Html.EditorFor(model=>model.Price)</dd>
+    </dl><br/>
+    <button>Create</button>
+</form>

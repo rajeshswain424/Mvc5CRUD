@@ -1,0 +1,24 @@
+﻿@model EfCrud.Models.Products
+    <h2>Modify the Product details</h2>
+    <form method="post">
+       <dl>
+        <dt>
+            @Html.HiddenFor(model => model.productId)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.EditorFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.EditorFor(model => model.Price)
+        </dd>
+        </dl><br/>
+        <button >save</button>
+        @Html.ActionLink("Back To Index", "Index")
+    </form>
+

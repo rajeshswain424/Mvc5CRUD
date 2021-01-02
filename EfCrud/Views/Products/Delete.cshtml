@@ -1,0 +1,9 @@
+﻿@model EfCrud.Models.Products
+    <h2>Are u sure want to delete?</h2>
+<form method="post">
+    @Html.HiddenFor(model=>model.productId)
+    @Html.DisplayForModel()
+    <br/>
+    <button>Delete</button>
+    @Html.ActionLink("cancel", "Index");
+</form>

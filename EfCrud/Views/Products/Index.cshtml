@@ -1,0 +1,20 @@
+﻿
+@model IEnumerable<EfCrud.Models.Products>
+    <h2>Products List</h2>
+<div>@Html.ActionLink("Create New","Create")</div><br/>
+<table width="400" border="1">
+    <th>@Html.DisplayNameFor(model=>model.Name)</th>
+    <th>@Html.DisplayNameFor(model=>model.Price)</th>
+    
+    <th colspan="3">Actions</th>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model=>item.Name)</td>
+            <td>@Html.DisplayFor(m=>item.Price)</td>
+            <td>@Html.ActionLink("Details","Details",new {id=item.productId})</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = item.productId })</td>
+            <td>@Html.ActionLink("Delete","Delete",new { id=item.productId})</td>
+        </tr>
+    }
+</table>
